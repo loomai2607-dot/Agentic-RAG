@@ -1,4 +1,4 @@
-🧠 Agentic RAG with AutoGen + LangGraph + Pinecone
+🧠 **Agentic RAG with AutoGen + LangGraph + Pinecone**
 
 An Agentic Retrieval-Augmented Generation (RAG) system that combines:
 
@@ -12,7 +12,7 @@ Full traceability of agent workflows for transparency and observability
 
 This repo includes both backend (FastAPI) and frontend (React) implementations, with a professional UI for real-time query flow and agent trace visualization.
 
-✨ Features
+✨ **Features**
 
 ⚡ Agentic Orchestration: Multi-agent workflow powered by AutoGen and LangGraph
 
@@ -32,7 +32,7 @@ Custom trace logger hooks for reliable observability
 
 🎨 Professional Frontend: Polished React UI with query flow, chat history, and trace canvas
 
-📂 Repo Structure
+📂 **Repo Structure**
 RAG/
 ├── backend/                # FastAPI backend
 │   ├── main.py             # Entry point
@@ -54,7 +54,7 @@ RAG/
 ├── docs/                   # Documentation, diagrams, architecture
 └── README.md               # This file
 
-🚀 Getting Started
+🚀 **Getting Started**
 1️⃣ Clone the repo
 git clone https://github.com/your-username/agentic-rag.git
 cd agentic-rag
