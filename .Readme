@@ -1,0 +1,110 @@
+🧠 Agentic RAG with AutoGen + LangGraph + Pinecone
+
+An Agentic Retrieval-Augmented Generation (RAG) system that combines:
+
+AutoGen + LangGraph for agent orchestration and workflow management
+
+Pinecone for vector storage and semantic retrieval
+
+Groq LLMs for fast reasoning and generation
+
+Full traceability of agent workflows for transparency and observability
+
+This repo includes both backend (FastAPI) and frontend (React) implementations, with a professional UI for real-time query flow and agent trace visualization.
+
+✨ Features
+
+⚡ Agentic Orchestration: Multi-agent workflow powered by AutoGen and LangGraph
+
+📚 Knowledge Retrieval: Scalable Pinecone vector database for embeddings and semantic search
+
+🧠 LLM Integration: Groq APIs for embeddings + text generation (low latency)
+
+🔍 Traceability & Observability:
+
+LangGraph trace visualization of each agent step
+
+Custom trace logger hooks for reliable observability
+
+📄 Dynamic Document Ingestion: Upload and embed PDFs into Pinecone in real-time
+
+💬 Chat Interface: React-based UI for querying the system and exploring results
+
+🎨 Professional Frontend: Polished React UI with query flow, chat history, and trace canvas
+
+📂 Repo Structure
+RAG/
+├── backend/                # FastAPI backend
+│   ├── main.py             # Entry point
+│   ├── routes/             # API endpoints (upload, query, embed, etc.)
+│   ├── services/           # Embedding, retrieval, and generation services
+│   ├── agents/             # AutoGen + LangGraph agent workflows
+│   ├── utils/              # Trace logger + observability utilities
+│   └── config/             # Env and settings
+│
+├── frontend/               # React + TypeScript frontend
+│   ├── src/
+│   │   ├── components/     # Chat, trace viewer, uploader
+│   │   ├── pages/          # Main UI pages
+│   │   ├── store/          # Redux state management
+│   │   ├── api/            # API integration layer
+│   │   └── App.tsx
+│   └── package.json
+│
+├── docs/                   # Documentation, diagrams, architecture
+└── README.md               # This file
+
+🚀 Getting Started
+1️⃣ Clone the repo
+git clone https://github.com/your-username/agentic-rag.git
+cd agentic-rag
+
+2️⃣ Backend Setup
+cd backend
+python -m venv venv
+source venv/bin/activate   # (Windows: venv\Scripts\activate)
+pip install -r requirements.txt
+
+
+Create a .env file in backend/ with:
+
+PINECONE_API_KEY=your_pinecone_key
+GROQ_API_KEY=your_groq_key
+PINECONE_ENV=your_env
+
+
+Run the backend:
+
+uvicorn main:app --reload --port 8000
+
+3️⃣ Frontend Setup
+cd frontend
+npm install
+npm start
+
+
+The app will be available at http://localhost:3000
+
+🔍 Usage
+
+Upload a PDF → it’s embedded into Pinecone
+
+Ask a question → retrieval happens via Pinecone
+
+Groq LLM generates contextual answers
+
+LangGraph trace viewer shows the full agent workflow (retrieval → reasoning → generation)
+
+📊 Observability
+
+✅ Agent workflow traces are captured and visualized in the frontend
+✅ Custom trace logger ensures logs are persistent for debugging & analytics
+✅ Real-time view of query flow for explainability
+
+🛠 Tech Stack
+
+Backend: FastAPI, AutoGen, LangGraph, Pinecone, Groq
+
+Frontend: React, TypeScript, Redux, Material UI, d3/graph visualization
+
+Infra: Modular, extensible, designed for production-ready RAG pipelines
